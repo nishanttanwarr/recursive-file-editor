@@ -1,4 +1,3 @@
-// src/components/ThemeToggle.jsx
 import { useState, useEffect } from 'react';
 
 const ThemeToggle = ({ onToggle }) => {

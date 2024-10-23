@@ -1,7 +1,6 @@
-// src/components/FolderItem.jsx
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import FileItem from './FileItem'; // Import FileItem
+import FileItem from './FileItem';
 
 const FolderItem = ({ folder, onOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +20,9 @@ const FolderItem = ({ folder, onOpen }) => {
         >
           {folder.items.map((item) => (
             item.type === 'folder' ? (
-              <FolderItem key={item.id} folder={item} onOpen={onOpen} /> // Pass onOpen to FolderItem
+              <FolderItem key={item.id} folder={item} onOpen={onOpen} /> 
             ) : (
-              <FileItem key={item.id} file={item} onOpen={onOpen} /> // Ensure onOpen is passed to FileItem
+              <FileItem key={item.id} file={item} onOpen={onOpen} /> 
             )
           ))}
         </motion.div>

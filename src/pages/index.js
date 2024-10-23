@@ -1,8 +1,7 @@
-// src/pages/index.js
 import { useState } from 'react';
 import FolderItem from '../components/FolderItem';
 import FileEditor from '../components/FileEditor';
-import ThemeToggle from '../components/ThemeToggle'; // Import ThemeToggle
+import ThemeToggle from '../components/ThemeToggle'; 
 
 const folderStructure = {
   id: 1,
@@ -28,7 +27,6 @@ export default function Home() {
   };
 
   const handleThemeToggle = (isDark) => {
-    // You can implement additional logic here if needed
     console.log(`Theme is now ${isDark ? 'Dark' : 'Light'}`);
   };
 

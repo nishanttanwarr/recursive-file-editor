@@ -2,18 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* src/styles/globals.css */
-
-/* src/styles/globals.css */
-
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Define dark mode styles */
 body.dark {
-  background-color: #1a202c; /* Dark background */
-  color: #f7fafc; /* Light text color */
+  background-color: #1a202c; 
+  color: #f7fafc; 
 }
 
 button {
