@@ -6,12 +6,30 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark {
-  background-color: #1a202c; 
-  color: #f7fafc; 
+/* Light Theme */
+body.light {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
 }
 
+/* Dark Theme */
+body.dark {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+/* Button styling */
 button {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Button styles for light and dark */
+button.light {
+  background-color: #e2e8f0; /* Light gray */
+  color: #000000; /* Black */
+}
+
+button.dark {
+  background-color: #4a5568; /* Dark gray */
+  color: #ffffff; /* White */
+}
