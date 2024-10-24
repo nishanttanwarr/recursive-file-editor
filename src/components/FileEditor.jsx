@@ -1,11 +1,10 @@
-// src/components/FileEditor.jsx
 import React, { useState, useEffect } from 'react';
 
 const FileEditor = ({ file, onSave }) => {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    // Set the initial content of the file when it's opened
+
     if (file) {
       setContent(file.content);
     }
@@ -17,11 +16,11 @@ const FileEditor = ({ file, onSave }) => {
 
   const handleSave = () => {
     if (onSave) {
-      onSave(file.id, content); // Call the onSave function with the file ID and new content
+      onSave(file.id, content); 
     }
   };
 
-  if (!file) return null; // Render nothing if no file is selected
+  if (!file) return null; 
 
   return (
     <div className="border p-4">

@@ -39,7 +39,7 @@ export default function Home() {
         id: Date.now(),
         name: fileName,
         type: 'file',
-        content: "", // Set initial content if needed
+        content: "", 
       };
       setFolderStructure((prev) => addToStructure(prev, parentId, newFile));
     }
@@ -50,11 +50,11 @@ export default function Home() {
       return folders.reduce((acc, folder) => {
         if (folder.type === 'folder') {
           const updatedItems = removeFileRecursive(folder.items);
-          // If updated items are empty, keep the folder structure
+     
           if (updatedItems.length > 0) {
             acc.push({ ...folder, items: updatedItems });
           } else {
-            // If the folder has no items, just keep it empty
+       
             acc.push({ ...folder, items: [] });
           }
         } else if (folder.id !== fileId) {
@@ -69,7 +69,7 @@ export default function Home() {
       items: removeFileRecursive(prev.items)
     }));
 
-    // Close the opened file if it was deleted
+    
     if (openedFile && openedFile.id === fileId) {
       setOpenedFile(null);
     }
@@ -97,7 +97,7 @@ export default function Home() {
           };
         }
         if (folder.id === fileId) {
-          return { ...folder, content: newContent }; // Update content
+          return { ...folder, content: newContent }; 
         }
         return folder;
       });
@@ -109,7 +109,7 @@ export default function Home() {
     }));
 
     if (openedFile && openedFile.id === fileId) {
-      setOpenedFile(prev => ({ ...prev, content: newContent })); // Update opened file content
+      setOpenedFile(prev => ({ ...prev, content: newContent })); 
     }
   };
 
@@ -127,7 +127,7 @@ export default function Home() {
             onOpen={handleOpenFile}
             onAddFolder={addFolder}
             onAddFile={addFile}
-            onDeleteFile={deleteFile} // Pass down the delete function
+            onDeleteFile={deleteFile} 
           />
         </div>
         <div className="w-2/3 p-4">

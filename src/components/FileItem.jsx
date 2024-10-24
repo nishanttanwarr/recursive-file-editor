@@ -7,7 +7,7 @@ const FileItem = ({ file, onOpen, onDeleteFile }) => {
         📄 {file.name}
       </span>
       <button
-        onClick={() => onDeleteFile(file.id)} // Call the delete function with file ID
+        onClick={() => onDeleteFile(file.id)} 
         className="ml-2 text-red-500 hover:text-red-700"
       >
         🗑️ Delete
